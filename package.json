@@ -13,7 +13,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "e2e": "node esbuild.mjs && node test/e2e/run.mjs",
-    "zip": "node esbuild.mjs --production && node scripts/zip.mjs"
+    "zip": "node esbuild.mjs --production && node scripts/zip.mjs",
+    "store:images": "node scripts/store-images.mjs"
   },
   "devDependencies": {
     "@types/chrome": "^0.3.7",

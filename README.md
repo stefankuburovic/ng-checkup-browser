@@ -45,6 +45,15 @@ The end-to-end run needs a Chromium that loads unpacked extensions: Playwright's
 
 The rules come from the CLI through `ng-checkup-cli/site` (ng-checkup-cli 2.3.1 or newer), so the extension and `ng-checkup url` share one source.
 
+## Publish
+
+1. `npm run e2e`, then `npm run store:images`: fresh screenshots and the store images in `store/images/`.
+2. `npm run zip`: the production build as `ng-checkup-browser-<version>.zip`.
+3. Chrome Web Store Developer Dashboard (one-time registration fee) → New item → upload the zip, then fill the listing, privacy and distribution tabs from [store/listing.md](store/listing.md) → Submit for review.
+4. Microsoft Partner Center, Edge Add-ons (free): the same zip and texts.
+
+Review usually takes a few days. A later version is the same zip with a higher `version` in `package.json`.
+
 ## How it is built
 
 - `src/collect/globals.ts` runs in the page's own JavaScript world and returns plain values only.
