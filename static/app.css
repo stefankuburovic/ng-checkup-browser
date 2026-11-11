@@ -1,0 +1,10 @@
+/* Page-level rules for the extension's own pages, on top of ext.css (the design's stylesheet). */
+html, body { margin: 0; background: var(--ov-surface); }
+.popup-page { width: 360px; }
+.popup-page .pop { height: auto; min-height: 460px; max-height: 600px; }
+.pop-loading, .pop-empty { display: flex; flex: 1; flex-direction: column; min-height: 0; }
+.pop-loading .empty { flex: 0; }
+.report-page { background: var(--ov-page); }
+.x button.dt-tab { font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; cursor: pointer; }
+.x button.dt-tab[aria-selected="true"] { color: var(--ov-text); font-weight: 650; border-bottom-color: var(--ov-accent); }
+.x .pop-actions .btn svg, .x .dt-tools .btn svg { width: 15px; height: 15px; }

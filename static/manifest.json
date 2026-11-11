@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "ng-checkup",
+  "short_name": "ng-checkup",
+  "description": "Which Angular a site runs, and whether it is in trouble: version and support, development builds, hydration, script weight.",
+  "version": "0.0.0",
+  "minimum_chrome_version": "120",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_title": "ng-checkup: check this page",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png"
+    }
+  },
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+K" },
+      "description": "Check this page"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ng-checkup-browser",
+  "displayName": "ng-checkup",
+  "description": "Which Angular a site runs, and whether it is in trouble: version and support, development builds, server rendering and hydration, script weight.",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Stefan Kuburovic",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "build:production": "node esbuild.mjs --production",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "node esbuild.mjs && node test/e2e/run.mjs",
+    "zip": "node esbuild.mjs --production && node scripts/zip.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^24.19.2",
+    "esbuild": "^0.28.2",
+    "ng-checkup-cli": "file:../ng-checkup",
+    "playwright-core": "^1.65.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
