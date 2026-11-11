@@ -19,7 +19,7 @@
     "@types/chrome": "^0.3.7",
     "@types/node": "^24.19.2",
     "esbuild": "^0.28.2",
-    "ng-checkup-cli": "file:../ng-checkup",
+    "ng-checkup-cli": "^2.3.1",
     "playwright-core": "^1.65.0",
     "typescript": "~6.0.3",
     "vitest": "^5.0.5"

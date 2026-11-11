@@ -43,7 +43,7 @@ Besides the fixture sites, `test/e2e/real.mjs` runs the extension against real b
 
 The end-to-end run needs a Chromium that loads unpacked extensions: Playwright's (`npx playwright install chromium`) or any path in `CHROMIUM_PATH`. Branded Chrome no longer loads extensions from the command line.
 
-The rules come from the CLI through `ng-checkup-cli/site`. Until a CLI release has that export, the dependency points at the sibling checkout (`file:../ng-checkup`).
+The rules come from the CLI through `ng-checkup-cli/site` (ng-checkup-cli 2.3.1 or newer), so the extension and `ng-checkup url` share one source.
 
 ## How it is built
 
